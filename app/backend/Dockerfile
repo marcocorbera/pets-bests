@@ -9,7 +9,8 @@ ARG requirement
 # Allows docker to cache installed dependencies between builds
 COPY ./requirements requirements
 RUN pip install --upgrade pip
-RUN pip install -r requirements/$requirement
+RUN pip install "setuptools<58.0"
+RUN pip install -r ./requirements/base.txt
 
 # Adds our application code to the image
 COPY ./ code

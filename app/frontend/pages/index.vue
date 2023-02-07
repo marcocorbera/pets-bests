@@ -17,7 +17,7 @@ import PetCard from '~/components/PetCard'
 export
  default {
   name: 'IndexPage',
-  created () {
+  mounted () {
     this.getPets()
   },
   components: {
